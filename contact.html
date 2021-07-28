@@ -1,43 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+  <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
 
-    <title>Contact Us</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
 
-    <div class="content">
-      <a id="myLink" href="#" onclick="MyFunction();return false;">link text</a>
-    </div> 
-
-              <!-- Start Navigation -->
+          <!-- Start Navigation -->
 <div class="hero-image">
-  <div class="nav-flex">
-    <button class="menu-btn">
-      <div class="bar"></div>
-    </button>
-    <nav>
-      <ul class="menu-list nav-hidden">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>  
+    <div class="nav-flex">
+      <button class="menu-btn">
+        <div class="bar"></div>
+      </button>
+      <nav>
+        <ul class="menu-list nav-hidden">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>  
 
-  <div>
     <div>
       <div>
-        <div class="hero-text">
-            <h1 style="font-size:50px">Kentucky Kayaking</h1>
-            <p>Where Kayaking Thrives</p>
+        <div>
+          <div class="hero-text">
+              <h1 style="font-size:50px">Kentucky Kayaking</h1>
+              <p>Where Kayaking Thrives</p>
+              <a href="contact.html" class="btn">Contact Us</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </div>
 
 <div>
@@ -48,22 +47,16 @@
 <div class="contact-form"></div>
 
     <form id="myForm" name="myForm">
-      <div>
-          <label for="username">Enter name:</label>
-          <input type="text" id="username" name="username">
+      <div class="input-group">
+          <label for="first_name">First name:</label>
+          <input type="text" id="first_name" name="first_name">
+      </div>
+      <div class="input-group">
+        <label for="last_name">Last name:</label>
+        <input type="text" id="last_name" name="last_name">
       </div>
       <button type="button" onclick="clickMe()">Add Me!</button>
   </form>
-  
-  <script>
-      // JS
-      function clickMe(){
-      let myForm = document.getElementById('myForm');
-      let formData = new FormData(myForm);
-      console.log(formData.get('username'));
-  
-  }
-  </script>
 
     <footer>
         <p>Copyright &copy; 2021 Kentucky Kayaking</p>

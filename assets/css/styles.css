@@ -1,7 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-font-family: 'Open Sans', sans-serif;
+  background-color: F2f2f2;
+  font-family: 'Open Sans', sans-serif;
 }
 
 main {
@@ -10,18 +15,20 @@ main {
 }
 
 h1 {
-font-size: 40px;
-font-weight: 700;
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 25px;
 }
 
 h2 {
-font-size: 33px;
-font-weight: 400;
+  font-size: 33px;
+  font-weight: 400;
+  margin-bottom: 15px;
 }
 
 h3 {
-font-size: 28px;
-font-weight: 400;
+  font-size: 28px;
+  font-weight: 400;
 }
 
 h4 {
@@ -38,13 +45,15 @@ a {
 p {
 font-size: 16px;
 font-weight: 400;
-padding: 20px;
+padding-bottom: 10px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+strong {
+  font-weight: 900;
+}
+
+.main-content {
+  padding: 0px 25px;
 }
 
 /* Begin Navigation Styling */
@@ -76,7 +85,6 @@ padding: 20px;
 }
 
 .menu-btn {
-  display: none;
   width: 35px;
   border: none;
   background: none;
@@ -98,11 +106,33 @@ padding: 20px;
   background-color: #fff;
 }
 
+.btn {
+  color: #FFF;
+}
+
+.flex-responsive-container {
+  display:flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.flex-item {
+  width: 100%;
+}
+
 /* Making the Navbar Responsive */
 
-@media(max-width: 400px) {
+@media screen and (min-width: 400px) {
   .menu-btn {
       display: block;
+  }
+
+  .flex-responsive-container {
+    flex-direction: row;
+  }
+
+  .flex-item {
+    width: 50%;
   }
 
   .main-nav {
@@ -151,6 +181,10 @@ margin-top: auto;
   .toggler {
     display: none;
   }
+
+  .column {
+    width: 100%;
+  }
   
   nav {
     display: inline-block !important; /* prevents the navigation to hide when resizing */
@@ -187,16 +221,11 @@ margin-top: auto;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
 
 /* Place text in the middle of the image */
 .hero-text {
   text-align: center;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: white;
 }
 
@@ -256,6 +285,8 @@ input[type=submit] {
 /**
 * Two Column Boxes****
 */
+
+
 * {
   box-sizing: border-box;
 }
@@ -269,16 +300,6 @@ input[type=submit] {
   float: left;
   width: 50%;
   padding: 10px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  clear: both;
 }
 
 @keyframes loading {
