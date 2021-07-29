@@ -1,3 +1,5 @@
+/* General Website Styling */
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +9,7 @@
 body {
   background-color: F2f2f2;
   font-family: 'Open Sans', sans-serif;
+  height: 100hv;
 }
 
 main {
@@ -23,17 +26,20 @@ h1 {
 h2 {
   font-size: 33px;
   font-weight: 400;
-  margin-bottom: 15px;
+  margin: 15px 10px;
 }
 
 h3 {
   font-size: 28px;
   font-weight: 400;
+  margin: 15px 10px;
+
 }
 
 h4 {
   font-size: 20px;
   font-weight: 300;
+  margin-bottom: 25px;
   }
 
 a {
@@ -46,6 +52,7 @@ p {
 font-size: 16px;
 font-weight: 400;
 padding-bottom: 10px;
+margin: 10px;
 }
 
 strong {
@@ -106,8 +113,36 @@ strong {
   background-color: #fff;
 }
 
+/* Contact Us button animation ***COURSE REQUIREMENT*** */
+
 .btn {
-  color: #FFF;
+  position: flex;
+  margin: 25px;
+  display: block;
+  color: white;
+  letter-spacing: 5px;
+	font-size: 20px;
+	text-align:adfgt center;
+  cursor: pointer;
+  max-width: 300px; 
+  width: 100%; 
+  outline: 3px solid;
+  outline-color: rgba(71, 126, 232,0.5);
+  outline-offset: 15px;
+  transition: all 600ms cubic-bezier(0.2, 0, 0, 0.8);
+}
+
+.container {
+	height: 100%;
+	display: flex;
+	align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+	color: rgba(71, 126, 232, 0.7);
+  outline-color: rgba(71, 126, 232, 0);
+  outline-offset: 300px;
 }
 
 .flex-responsive-container {
@@ -120,11 +155,11 @@ strong {
   width: 100%;
 }
 
-/* Making the Navbar Responsive */
+/* Media Queries For Smaller Screens ***COURSE REQUIREMENT*** */
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 401px) {
   .menu-btn {
-      display: block;
+    display: block;
   }
 
   .flex-responsive-container {
@@ -136,21 +171,21 @@ strong {
   }
 
   .main-nav {
-      flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 
   .menu-list {
-      flex-basis: 100%;
-      flex-grow: 1;
-      flex-direction: column;
+    flex-basis: 100%;
+    flex-grow: 1;
+    flex-direction: column;
   }
 
   .menu-item {
-      margin-top: 0.5rem;
+    margin-top: 0.5rem;
   }
 
   .nav-hidden {
-      display: none;
+    display: none;
   }
 }
 
@@ -172,8 +207,22 @@ margin-top: auto;
   text-align: center;
 }
 
-@media screen and (min-width: 872px) {
+.about-image {
+  width: 100%;
+}
+
+/* Media Queries For Larger Screens */
+
+@media screen and (min-width: 800px) {
   
+  .nav-hidden {
+    display: inline-block;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
   .content {
     padding: 0 50px;
   }
@@ -212,18 +261,18 @@ margin-top: auto;
 * Hero Image Styling
 */
 
-/* The hero image */
+/* The hero image background*/
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/Kayaking.jpg");
 
-  /* Position and center the image to scale nicely on all screens */
+/* Position and center the image to scale on all screens */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-/* Place text in the middle of the image */
+/* Place hero text in the middle of the image */
 .hero-text {
   text-align: center;
   color: white;
@@ -254,38 +303,36 @@ margin-top: auto;
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
   width: 100%; 
-  padding: 12px; 
+  padding: 10px; 
   border: 1px solid #ccc; /* Gray border */
   border-radius: 4px; /* Rounded borders */
   box-sizing: border-box;
-  margin-top: 6px; 
-  margin-bottom: 16px; 
+  margin: 20px;  
   resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
-/* Style the submit button with a specific background color etc */
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.input-group {
+  margin-left: 20px;
 }
 
+/* Style "Add Me!" button */
 
-/* Add a background color and some padding around the form */
+.button {
+  margin: 20px 10px;
+  background-color: #5FC0DC;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
 .contact-form {
   display: flex;
   border-radius: 5px;
-  background-color: #f2f2f2;
   padding: 20px;
 }
 
 /**
 * Two Column Boxes****
 */
-
 
 * {
   box-sizing: border-box;
@@ -300,16 +347,18 @@ input[type=submit] {
   float: left;
   width: 50%;
   padding: 10px;
+  border-color: #ccc;
 }
 
-@keyframes loading {
-  to {
-    transform: rotate(1turn);
-  }
-  from {
-    transform: rotate(0turn);
-  }
 
+/* Contact Us Image Styles */
+.about-image {
+  display: flex;
+  width: 400px;
+  height: auto;
+  margin: 30px;
+  object-fit: cover;
+  object-position: bottom;
 }
 
 /**
@@ -322,4 +371,5 @@ footer {
   padding: 5px;
   background-color: #5FC0DC;
   color: #fff;
+  margin-top: auto
 }

@@ -14,7 +14,7 @@
           <!-- Start Navigation -->
 <div class="hero-image">
     <div class="nav-flex">
-      <button class="menu-btn">
+      <button onclick="Navbar()" class="menu-btn">
         <div class="bar"></div>
       </button>
       <nav>
@@ -32,7 +32,9 @@
           <div class="hero-text">
               <h1 style="font-size:50px">Kentucky Kayaking</h1>
               <p>Where Kayaking Thrives</p>
+            <div class="container">
               <a href="contact.html" class="btn">Contact Us</a>
+            </div>
           </div>
         </div>
       </div>
@@ -43,21 +45,23 @@
   <h3>Submit your name below to be added to our communications list</h3>
 </div>
 
+          <!-- Contact Form -->
 
-<div class="contact-form"></div>
+          <div class="contact-form"></div>
 
-    <form id="myForm" name="myForm">
-      <div class="input-group">
-          <label for="first_name">First name:</label>
-          <input type="text" id="first_name" name="first_name">
-      </div>
-      <div class="input-group">
-        <label for="last_name">Last name:</label>
-        <input type="text" id="last_name" name="last_name">
-      </div>
-      <button type="button" onclick="clickMe()">Add Me!</button>
-  </form>
+          <form id="myForm" name="myForm">
+            <div class="input-group">
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="first_name">
+            </div>
+              <div class="input-group">
+                  <label for="last_name">Last Name:</label>
+                  <input type="text" id="last_name" name="last_name">
+              </div>
+            <button class="button" type="button" onclick="clickMe()">Add Me!</button>
+        </form>
 
+<!-- FOOTER -->
     <footer>
         <p>Copyright &copy; 2021 Kentucky Kayaking</p>
     </footer>
