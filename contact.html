@@ -19,9 +19,9 @@
       </button>
       <nav>
         <ul class="menu-list nav-hidden">
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
       </nav>
     </div>  
@@ -49,16 +49,23 @@
 
           <div class="contact-form"></div>
 
+         
           <form id="myForm" name="myForm">
-            <div class="input-group">
+            <div class="flex-responsive-container">
+
+            <div class="flex-item">
                 <label for="first_name">First Name:</label>
                 <input type="text" id="first_name" name="first_name">
             </div>
-              <div class="input-group">
+
+              <div class="flex-item">
                   <label for="last_name">Last Name:</label>
                   <input type="text" id="last_name" name="last_name">
               </div>
+
+            </div>
             <button class="button" type="button" onclick="clickMe()">Add Me!</button>
+          
         </form>
 
 <!-- FOOTER -->
@@ -67,5 +74,6 @@
     </footer>
 
   </body>
+  <script src= "assets/js/script.js"></script>
 
 </html>

@@ -9,7 +9,7 @@
 body {
   background-color: F2f2f2;
   font-family: 'Open Sans', sans-serif;
-  height: 100hv;
+  height: 100vh;
 }
 
 main {
@@ -72,9 +72,12 @@ strong {
 
 .menu-list {
   list-style-type: none;
-  padding: 0;
   margin: 0;
   display: flex;
+}
+
+.menu-list li {
+  padding-right: 10px;
 }
 
 .menu-item:not(:last-child){
@@ -92,6 +95,7 @@ strong {
 }
 
 .menu-btn {
+  margin-right: 15px;
   width: 35px;
   border: none;
   background: none;
@@ -113,7 +117,7 @@ strong {
   background-color: #fff;
 }
 
-/* Contact Us button animation ***COURSE REQUIREMENT*** */
+/* Contact Us/Hero Image Button Animation ***COURSE REQUIREMENT*** */
 
 .btn {
   position: flex;
@@ -127,7 +131,7 @@ strong {
   max-width: 300px; 
   width: 100%; 
   outline: 3px solid;
-  outline-color: rgba(71, 126, 232,0.5);
+  outline-color: #5FC0DC; 
   outline-offset: 15px;
   transition: all 600ms cubic-bezier(0.2, 0, 0, 0.8);
 }
@@ -301,8 +305,7 @@ margin-top: auto;
 */
 
 /* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-  width: 100%; 
+input[type=text], select, textarea { 
   padding: 10px; 
   border: 1px solid #ccc; /* Gray border */
   border-radius: 4px; /* Rounded borders */
@@ -353,11 +356,9 @@ input[type=text], select, textarea {
 
 /* Contact Us Image Styles */
 .about-image {
-  display: flex;
-  width: 400px;
+  width: 100%;
   height: auto;
-  margin: 30px;
-  object-fit: cover;
+  margin-top: 30px;
   object-position: bottom;
 }
 
